@@ -1,1 +1,78 @@
-@import '../node_modules/bootstrap/scss/bootstrap';
+@import './variables.scss';
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contacts {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+    @media (max-width: 400px) {
+      justify-content: flex-start;
+    }
+  }
+
+  svg {
+    transition: $transition;
+    font-size: $fontSizeButton;
+
+    &:hover {
+      opacity: $hoverOpacity;
+    }
+
+    path {
+      fill: $textColor;
+    }
+  }
+
+  .copyright {
+    font-size: $fontSizeSmall;
+    margin: 0;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: $transition;
+
+  &:hover .logo__text {
+    opacity: $hoverOpacity;
+  }
+
+  .logo__img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo__text {
+    transition: $transition;
+
+    &:hover {
+      opacity: $hoverOpacity;
+    }
+  }
+
+  .logo__text_primary {
+    color: $titleColor;
+    font-family: $fontMontserrat;
+    margin: 0;
+  }
+
+  .logo__text_secondary {
+    color: $textColor;
+    margin: 0;
+    font-size: $fontSizeSmall;
+  }
+}

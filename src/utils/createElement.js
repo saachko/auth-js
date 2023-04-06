@@ -1,7 +1,7 @@
 // el: string (tag name)
 // classNames: sting (classNames divided with space)
 // parent: HTMLElement
-// dataAttr: [string, string]
+// dataAttr: [[string, string]]
 
 function createElement(el, classNames, parent, inner, dataAttr) {
   let element = null;
@@ -28,7 +28,9 @@ function createElement(el, classNames, parent, inner, dataAttr) {
       if (element) {
         if (attrValue === '') {
           element.setAttribute(attrName, '');
-        } else if (attrName.match(/href|title|src|alt|id|type|value|name/)) {
+        } else if (
+          attrName.match(/href|title|target|src|alt|id|type|value|name/)
+        ) {
           element.setAttribute(attrName, attrValue);
         } else {
           element.dataset[attrName] = attrValue;
