@@ -1,6 +1,7 @@
 import validateForm from './validateForm';
 import * as storage from './storage';
-import { isLoggedIn } from './constants';
+import { isLoggedIn, requestStatuses } from './constants';
+import signUpUser from './api';
 
 const submitForm = async (event) => {
   event.preventDefault();
@@ -12,9 +13,11 @@ const submitForm = async (event) => {
     });
     delete requestBody.submit;
     delete requestBody['confirm-password'];
-    console.log(requestBody);
-    storage.set(isLoggedIn, `${requestBody.name} ${requestBody.surname}`);
-    document.location.reload();
+    const newUser = await signUpUser(requestBody);
+    if (newUser === requestStatuses.successful || requestStatuses.created) {
+      storage.set(isLoggedIn, JSON.stringify(requestBody));
+      document.location.reload();
+    }
   }
 };
 

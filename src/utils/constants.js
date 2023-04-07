@@ -2,7 +2,7 @@ import { github, linkedin, mail, telegram } from '../components/icons';
 
 const baseUrl = 'https://jsonplaceholder.typicode.com/posts';
 
-const isLoggedIn = 'isUserLoggedIn';
+const isLoggedIn = 'loggedInUserData';
 
 const authorsContacts = [
   {
@@ -80,6 +80,13 @@ const passwordError =
 
 const comparisonError = "Passwords don't match";
 
+const requestStatuses = {
+  created: 201,
+  successful: 200,
+  forbidden: 403,
+  error: 500,
+};
+
 export {
   baseUrl,
   isLoggedIn,
@@ -94,4 +101,5 @@ export {
   emailError,
   passwordError,
   comparisonError,
+  requestStatuses,
 };
