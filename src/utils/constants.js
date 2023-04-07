@@ -46,7 +46,7 @@ const inputs = [
   {
     id: 'email',
     label: 'E-mail',
-    inputType: 'email',
+    inputType: 'text',
   },
   {
     id: 'password',
@@ -73,7 +73,7 @@ const maxError = "Field shouldn't longer than 25 symbols";
 
 const dateError = "Date can't be later than today";
 
-const emailError = 'Check your e-mail';
+const emailError = 'Check your e-mail spelling';
 
 const passwordError =
   'Password should contain at least 8 symbols, one uppercase character, one number and one of special symbols !@#$%';

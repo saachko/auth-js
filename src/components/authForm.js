@@ -1,12 +1,12 @@
 import { inputs, passwordError } from '../utils/constants';
 import createElement from '../utils/createElement';
-import validateForm from '../utils/validateForm';
+import submitForm from '../utils/submitForm';
 import { eye } from './icons';
 
 function renderAuthForm() {
   const main = document.querySelector('main');
   createElement('h1', '', main, 'Sign up');
-  const form = createElement('form', 'auth-form', main);
+  const form = createElement('form', 'auth-form', main, null, [['name', 'auth-form']]);
 
   inputs.forEach((elem) => {
     const formGroup = createElement('div', 'mb-3 auth-form__group', form);
@@ -21,6 +21,7 @@ function renderAuthForm() {
       [
         ['id', elem.id],
         ['type', elem.inputType],
+        ['name', elem.id],
       ]
     );
     if (elem.id === 'password') {
@@ -51,7 +52,7 @@ function renderAuthForm() {
     ['type', 'submit'],
     ['id', 'submit'],
   ]);
-  form.addEventListener('submit', (event) => validateForm(event));
+  form.addEventListener('submit', (event) => submitForm(event));
 }
 
 export default renderAuthForm;

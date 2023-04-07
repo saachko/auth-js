@@ -62,11 +62,11 @@ const comparePasswords = (password, passwordToConfirm, id) => {
   }
 };
 
-const validateForm = (event) => {
-  event.preventDefault();
-  clearErrors();
-  // let isFormValid = false;
+const validateForm = () => {
+  const errors = clearErrors();
+  let isFormValid = false;
   const inputElements = {};
+
   inputs.forEach((elem) => {
     inputElements[elem.id] = document.querySelector(`#${elem.id}`);
     if (!document.querySelector(`#${elem.id}`).value) {
@@ -83,6 +83,11 @@ const validateForm = (event) => {
     inputElements['confirm-password'].value,
     'confirm-password'
   );
+
+  if (Array.from(errors).every((elem) => !elem.innerHTML)) {
+    isFormValid = true;
+  }
+  return isFormValid;
 };
 
 export default validateForm;
