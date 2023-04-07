@@ -19,7 +19,7 @@ const renderUserProfile = (requestBody) => {
   });
   const logOutButton = createElement(
     'button',
-    'btn btn-light w-100',
+    'btn btn-light w-100 mt-4',
     dataWrapper,
     'Log out and return',
     [['type', 'button']]

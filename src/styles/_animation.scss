@@ -1,6 +1,10 @@
 .greeting {
   width: 100vw;
 
+  @media (max-width: 400px) {
+    width: 95vw;
+  }
+
   path {
     stroke-dasharray: 25000;
     stroke-dashoffset: 25000;
