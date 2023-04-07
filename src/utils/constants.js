@@ -67,9 +67,9 @@ const passwordValidation =
 
 const emptyError = "Field can't be empty";
 
-const minError = 'Field should be at least 2 symbols';
+const minError = 'Field should has at least 2 symbols';
 
-const maxError = "Field shouldn't longer than 25 symbols";
+const maxError = "Field shouldn't be longer than 25 symbols";
 
 const dateError = "Date can't be later than today";
 
