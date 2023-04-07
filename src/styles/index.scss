@@ -1,0 +1,74 @@
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import './styles.scss';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  background-color: $backgroundColor;
+  color: $textColor;
+  font-weight: $fontWeightRegular;
+  font-size: $fontSizeText;
+  font-family: $fontInter;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main,
+footer {
+  padding: $paddingPage;
+}
+
+main {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @media (max-width: 400px) {
+    height: calc(100vh - 130px);
+  }
+}
+
+footer {
+  border-top: 1px solid $linesColor;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $fontMontserrat;
+  font-weight: $fontWeightBold;
+  color: $titleColor;
+}
+
+h1 {
+  font-size: $fontSizeH1;
+}
+
+h2 {
+  font-size: $fontSizeH2;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: $fontSizeH3;
+}
