@@ -11,6 +11,8 @@
   "rules": {
     "no-extraneous-dependencies": "off",
     "comma-dangle": "off",
-    "object-curly-newline": "off"
+    "object-curly-newline": "off",
+    "no-param-reassign": "off",
+    "operator-linebreak": "off"
   }
 }

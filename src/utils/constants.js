@@ -54,10 +54,44 @@ const inputs = [
     inputType: 'password',
   },
   {
-    id: 'confirmPassword',
+    id: 'confirm-password',
     label: 'Confirm your password',
     inputType: 'password',
   },
 ];
 
-export { baseUrl, isLoggedIn, authorsContacts, inputs };
+const emailValidation = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+
+const passwordValidation =
+  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%])[A-Za-z\d!@#$%]{8,}$/g;
+
+const emptyError = "Field can't be empty";
+
+const minError = 'Field should be at least 2 symbols';
+
+const maxError = "Field shouldn't longer than 25 symbols";
+
+const dateError = "Date can't be later than today";
+
+const emailError = 'Check your e-mail';
+
+const passwordError =
+  'Password should contain at least 8 symbols, one uppercase character, one number and one of special symbols !@#$%';
+
+const comparisonError = "Passwords don't match";
+
+export {
+  baseUrl,
+  isLoggedIn,
+  authorsContacts,
+  inputs,
+  emailValidation,
+  passwordValidation,
+  emptyError,
+  minError,
+  maxError,
+  dateError,
+  emailError,
+  passwordError,
+  comparisonError,
+};

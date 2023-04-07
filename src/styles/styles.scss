@@ -82,6 +82,10 @@
   border: 1px solid $linesColor;
   border-radius: 5px;
 
+  .auth-form__group {
+    position: relative;
+  }
+
   .form-label {
     margin: 0;
   }
@@ -105,4 +109,50 @@
       opacity: $hoverOpacity;
     }
   }
+
+  .invalid-feedback {
+    display: block;
+    position: absolute;
+    font-size: $fontSizeSmall;
+    bottom: -18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    &#error-password {
+      cursor: pointer;
+    }
+  }
+}
+
+.password-icon {
+  position: absolute;
+  width: 25px;
+  right: 10px;
+  top: 30px;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    opacity: $hoverOpacity;
+  }
+}
+
+.error-tooltip {
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  font-size: $fontSizeSmall;
+  padding: 5px 10px;
+  border-radius: 5px;
+  bottom: -80px;
+
+  @media (max-width: 390px) {
+    bottom: -100px;
+  }
+}
+
+.hidden {
+  display: none;
 }
