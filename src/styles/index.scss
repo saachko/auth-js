@@ -33,6 +33,10 @@ footer {
 
 main {
   height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
   @media (max-width: 400px) {
     height: calc(100vh - 130px);

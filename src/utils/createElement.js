@@ -29,7 +29,7 @@ function createElement(el, classNames, parent, inner, dataAttr) {
         if (attrValue === '') {
           element.setAttribute(attrName, '');
         } else if (
-          attrName.match(/href|title|target|src|alt|id|type|value|name/)
+          attrName.match(/href|title|target|src|alt|id|type|value|name|for/)
         ) {
           element.setAttribute(attrName, attrValue);
         } else {

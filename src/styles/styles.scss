@@ -76,3 +76,33 @@
     font-size: $fontSizeSmall;
   }
 }
+
+.auth-form {
+  padding: 15px 30px;
+  border: 1px solid $linesColor;
+  border-radius: 5px;
+
+  .form-label {
+    margin: 0;
+  }
+
+  .form-control {
+    width: 290px;
+
+    @media (max-width: 390px) {
+      width: 220px;
+    }
+  }
+
+  .btn-primary {
+    width: 100%;
+    background-color: rgb(137, 178, 248);
+    background: linear-gradient(135deg, rgb(197, 90, 213), rgb(137, 178, 248));
+    border: none;
+    transition: $transition;
+
+    &:hover {
+      opacity: $hoverOpacity;
+    }
+  }
+}

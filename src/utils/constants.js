@@ -27,4 +27,37 @@ const authorsContacts = [
   },
 ];
 
-export { baseUrl, isLoggedIn, authorsContacts };
+const inputs = [
+  {
+    id: 'name',
+    label: 'Name',
+    inputType: 'text',
+  },
+  {
+    id: 'surname',
+    label: 'Surname',
+    inputType: 'text',
+  },
+  {
+    id: 'birthday',
+    label: 'Date of birth',
+    inputType: 'date',
+  },
+  {
+    id: 'email',
+    label: 'E-mail',
+    inputType: 'email',
+  },
+  {
+    id: 'password',
+    label: 'Password',
+    inputType: 'password',
+  },
+  {
+    id: 'confirmPassword',
+    label: 'Confirm your password',
+    inputType: 'password',
+  },
+];
+
+export { baseUrl, isLoggedIn, authorsContacts, inputs };
